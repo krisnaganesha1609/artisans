@@ -1,4 +1,6 @@
 #include <iostream>
+#include "artisans.h"
+#include "artisans.cpp"
 
 using namespace std;
 
