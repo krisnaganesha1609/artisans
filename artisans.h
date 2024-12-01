@@ -6,52 +6,60 @@
 #define next(P) P->next
 
 // linux mad with these
-// using namespace std;
+// naa, it doesn't
+using namespace std;
 
-typedef struct adrKerajinan &elmKerajinan;
-typedef struct adrPasar &elmPasar;
-typedef struct adrRelasi &elmRelasi;
+typedef struct elmKerajinan *adrKerajinan;
+typedef struct elmPasar *adrPasar;
+typedef struct elmRelasi *adrRelasi;
 
-struct ListPasar {
+struct ListPasar
+{
     adrPasar FirstPasar;
 };
 
-struct ListKerajinan {
+struct ListKerajinan
+{
     adrKerajinan Firstkerajinan;
     adrKerajinan Lastkerajinan;
 };
 
-struct ListRelasi {
+struct ListRelasi
+{
     adrRelasi FirstRelasi;
     adrRelasi LastRelasi;
 };
 
-struct kerajinan {
+struct kerajinan
+{
     std::string namaKerajinan;
     std::string namaPengrajin;
     int stok;
-
 };
 
-struct pasar {
+struct pasar
+{
     std::string namaPasar;
     std::string lokasi;
 };
 
-struct elmKerajinan {
+struct elmKerajinan
+{
     kerajinan info;
     adrKerajinan nextkerajinan;
 };
 
-struct elmPasar {
+struct elmPasar
+{
     pasar info;
     adrPasar nextPasar;
 };
 
-struct elmRelasi {
+struct elmRelasi
+{
     adrPasar nextPasar;
     adrKerajinan nextKerajinan;
     adrRelasi nextRelasi;
 };
 
-#endif //ARTISANS_H_INCLUDED
+#endif // ARTISANS_H_INCLUDED
