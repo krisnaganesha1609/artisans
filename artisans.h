@@ -1,12 +1,13 @@
 #ifndef ARTISANS_H_INCLUDED
 #define ARTISANS_H_INCLUDED
 #include <iostream>
-#define first(L) L.first
-#define info(P) P->info
-#define next(P) P->next
+#define firstKerajinan(L) L.FirstKerajinan
+#define firstPasar(G) G.FirstPasar
+#define infoKerajinan(P) P->infoKerajinan
+#define nextKerajinan(P) P->nextKerajinan
+#define infoPasar(Q) Q->infoPasar
+#define nextPasar(Q) Q->nextPasar
 
-// linux mad with these
-// naa, it doesn't
 using namespace std;
 
 typedef struct elmKerajinan *adrKerajinan;
