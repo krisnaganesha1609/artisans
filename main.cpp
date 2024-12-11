@@ -1,7 +1,9 @@
 #include "artisans.h"
+#include "menu.h"
+#include "menu.cpp"
 
 int main()
 {
-    cout << "Hello World from Fedora 41 with hyprland!" << endl;
+    welcomeBanner();
     return 0;
 }

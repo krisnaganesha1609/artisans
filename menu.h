@@ -4,6 +4,11 @@
 
 using namespace std;
 
-void welComeBanner();
+void welcomeBanner();
+void mainMenu();
+void addData();
+void configData();
+void editData();
+void deleteData();
 
 #endif // MENU_H_INCLUDED
