@@ -2,49 +2,187 @@
 
 void createListPasar(ListPasar &L)
 {
+    firstPasar(L) = NULL;
 }
 
 void createListKerajinan(ListKerajinan &L)
 {
+    firstKerajinan(L) = NULL;
+    lastKerajinan(L) = NULL;
 }
 
 adrPasar createNewElmPasar(pasar x)
 {
-    return adrPasar();
+    adrPasar P = new pasar;
+    infoPasar(P) = x;
+    nextPasar(P) = NULL;
+    return P;
 }
 
 adrKerajinan createNewElmKerajinan(kerajinan x)
 {
-    return adrKerajinan();
+    adrKerajinan P = new kerajinan;
+    infoKerajinan(P) = x;
+    nextKerajinan(P) = NULL;
+    prevKerajinan(P) = NULL;
+    return P;
 }
 
 void insertLastPasar(ListPasar &L, adrPasar P)
 {
+    if (firstPasar(L) == NULL)
+    {
+        firstPasar(L) = P;
+        return;
+    }
+    adrPasar finder = firstPasar(L);
+    while (nextPasar(finder) != NULL)
+    {
+        finder = nextPasar(finder);
+    }
+    nextPasar(finder) = P;
 }
 
 void insertLastKerajinan(ListKerajinan &L, adrKerajinan P)
 {
+    if (firstKerajinan(L) == NULL && lastKerajinan(L) == NULL)
+    {
+        firstKerajinan(L) = P;
+        lastKerajinan(L) = P;
+        return;
+    }
+    adrKerajinan finder = lastKerajinan(L);
+    nextKerajinan(lastKerajinan(L)) = P;
+    prevKerajinan(P) = lastKerajinan(L);
+    lastKerajinan(L) = P;
 }
 
-void deleteFoundKerajinan(ListKerajinan &L, adrKerajinan &P, adrKerajinan prec)
+void deleteFoundKerajinan(ListKerajinan &L, adrKerajinan &P, adrKerajinan del)
 {
+    if (del == firstKerajinan(L))
+    {
+        firstKerajinan(L) = nextKerajinan(firstKerajinan(L));
+        nextKerajinan(del) = NULL;
+    }
+    else if (del == lastKerajinan(L))
+    {
+        lastKerajinan(L) = prevKerajinan(lastKerajinan(L));
+        prevKerajinan(del) = NULL;
+    }
+    else if (del == NULL)
+    {
+        cout << "Desired data does not found!" << endl;
+    }
+    else
+    {
+        adrKerajinan prec = prevKerajinan(del);
+        nextKerajinan(prec) = nextKerajinan(del);
+        prevKerajinan(nextKerajinan(del)) = prec;
+        prevKerajinan(del) = NULL;
+        nextKerajinan(del) = NULL;
+    }
+    P = del;
 }
 
-void deleteFoundPasar(ListPasar &L, adrPasar &P, adrPasar prec)
+void deleteFoundPasar(ListPasar &L, adrPasar &P, adrPasar del)
 {
+    if (del == firstPasar(L))
+    {
+        firstPasar(L) = nextPasar(firstPasar(L));
+        nextPasar(del) = NULL;
+    }
+    else if (nextPasar(del) == NULL)
+    {
+        adrPasar finder = firstPasar(L);
+        while (nextPasar(finder) != del)
+        {
+            finder = nextPasar(finder);
+        }
+        nextPasar(finder) = NULL;
+    }
+    else if (del == NULL)
+    {
+        cout << "Desired data does not found!" << endl;
+    }
+    else
+    {
+        adrPasar finder = firstPasar(L);
+        while (nextPasar(finder) != del)
+        {
+            finder = nextPasar(finder);
+        }
+        nextPasar(finder) = nextPasar(del);
+        nextPasar(del) = NULL;
+    }
 }
 
 adrPasar findPasarByLokasi(ListPasar L, string lokasi)
 {
-    return adrPasar();
+    adrPasar Q = firstPasar(L);
+    bool found = false;
+    while (Q != NULL && !found)
+    {
+        if (infoPasar(Q).lokasi == lokasi)
+        {
+            found = true;
+        }
+        Q = nextPasar(Q);
+    }
+    return Q;
 }
 
 adrKerajinan findKerajinanByNamaKerajinan(ListKerajinan L, string namaKerajinan)
 {
-    return adrKerajinan();
+    adrKerajinan Q = firstKerajinan(L);
+    bool found = false;
+    while (Q != NULL && !found)
+    {
+        if (infoKerajinan(Q).namaKerajinan == namaKerajinan)
+        {
+            found = true;
+        }
+        Q = nextKerajinan(Q);
+    }
+    return Q;
 }
 
 adrKerajinan findKerajinanByNamaPengrajin(ListKerajinan L, string namaPengrajin)
 {
-    return adrKerajinan();
+    adrKerajinan Q = firstKerajinan(L);
+    bool found = false;
+    while (Q != NULL && !found)
+    {
+        if (infoKerajinan(Q).namaPengrajin == namaPengrajin)
+        {
+            found = true;
+        }
+        Q = nextKerajinan(Q);
+    }
+    return Q;
+}
+
+void showAllPasar(ListPasar L)
+{
+    adrPasar pas = firstPasar(L);
+    int i = 1;
+    cout << "LIST OF REGISTERED MARKET - ARTISANS" << endl;
+    while (pas != NULL)
+    {
+        cout << i << ". " << infoPasar(pas).namaPasar << " - " << infoPasar(pas).lokasi << endl;
+        pas = nextPasar(pas);
+    }
+    cout << endl;
+}
+
+void showAllKerajinan(ListKerajinan L)
+{
+    adrKerajinan ker = firstKerajinan(L);
+    int i = 1;
+    cout << "LIST OF REGISTERED CRAFTS - ARTISANS" << endl;
+    while (ker != NULL)
+    {
+        cout << i << ". " << infoKerajinan(ker).namaPengrajin << " - " << infoKerajinan(ker).namaKerajinan << " - Stok: " << infoKerajinan(ker).stok << endl;
+        ker = nextKerajinan(ker);
+    }
+    cout << endl;
 }

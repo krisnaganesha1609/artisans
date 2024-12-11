@@ -60,10 +60,13 @@ adrKerajinan createNewElmKerajinan(kerajinan x);
 
 void insertLastPasar(ListPasar &L, adrPasar P);
 void insertLastKerajinan(ListKerajinan &L, adrKerajinan P);
-void deleteFoundKerajinan(ListKerajinan &L, adrKerajinan &P, adrKerajinan prec);
-void deleteFoundPasar(ListPasar &L, adrPasar &P, adrPasar prec);
+void deleteFoundKerajinan(ListKerajinan &L, adrKerajinan &P, adrKerajinan del);
+void deleteFoundPasar(ListPasar &L, adrPasar &P, adrPasar del);
 adrPasar findPasarByLokasi(ListPasar L, string lokasi);
 adrKerajinan findKerajinanByNamaKerajinan(ListKerajinan L, string namaKerajinan);
 adrKerajinan findKerajinanByNamaPengrajin(ListKerajinan L, string namaPengrajin);
+
+void showAllPasar(ListPasar L);
+void showAllKerajinan(ListKerajinan L);
 
 #endif // ARTISANS_H_INCLUDED
