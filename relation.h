@@ -19,8 +19,8 @@ struct ListRelasi
 
 struct elmRelasi
 {
-    adrPasar nextPasar;
-    adrKerajinan nextKerajinan;
+    adrPasar nextRelasiPasar;
+    adrKerajinan nextRelasiKerajinan;
     adrRelasi nextRelasi;
     adrRelasi prevRelasi;
 };
@@ -28,7 +28,12 @@ struct elmRelasi
 void createListRelasi(ListRelasi &L);
 adrRelasi createNewElmRelasi(adrPasar p, adrKerajinan k);
 void insertLastRelasi(ListRelasi &L, adrRelasi P);
-void deleteFoundRelasi(ListRelasi &L, adrRelasi &P, adrRelasi prec);
+void deleteFoundRelasi(ListRelasi &L, adrRelasi &P, adrRelasi del);
 adrRelasi findRelasi(ListRelasi L, adrKerajinan K, adrPasar P);
+adrRelasi findRelasiByInfo(ListRelasi L, string lokasiPasar, string namaKerajinan);
+
+void connectRelasi(ListRelasi &L, ListPasar LP, ListKerajinan LK, string lokasiPasar, string namaKerajinan);
+
+void printAllRelasi(ListRelasi L, ListPasar LP);
 
 #endif // RELATION_H_INCLUDED
