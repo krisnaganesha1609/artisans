@@ -5,5 +5,6 @@
 int main()
 {
     welcomeBanner();
+    mainMenu();
     return 0;
 }

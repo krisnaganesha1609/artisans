@@ -22,7 +22,7 @@ void welcomeBanner() {
     printf(" Available on:            Windows & Linux \n");
     printf("==========================================\n");
     sleep_for(3s);
-    printf("\033[H");
+    printf("\033[2J\033[1;1H");
 }
 
 // Main Menu
@@ -35,7 +35,7 @@ void mainMenu() {
     printf("3. Tampilkan Data\n");
     printf("\n");
     printf("Pilih menu (1-3): ");
-    // printf("\033[H");
+    // printf("\033[2J\033[1;1H");
 }
 
 void configData() {
@@ -45,9 +45,10 @@ void configData() {
     printf("1. Edit Data\n");
     printf("2. delete Data\n");
     printf("3. Cari Data\n");
+    printf("4. Relasi Data\n");
     printf("\n");
     printf("Pilih menu (1-3): ");
-    // printf("\033[H");
+    // printf("\033[2J\033[1;1H");
 }
 
 // add data
