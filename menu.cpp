@@ -33,6 +33,7 @@ void mainMenu() {
     printf("1. Tambah Data\n");
     printf("2. Konfigurasi Data\n");
     printf("3. Tampilkan Data\n");
+    printf("4. Keluar dari program\n");
     printf("\n");
     printf("Pilih menu (1-3): ");
     // printf("\033[2J\033[1;1H");
@@ -46,8 +47,9 @@ void configData() {
     printf("2. delete Data\n");
     printf("3. Cari Data\n");
     printf("4. Relasi Data\n");
+    printf("5. Kembali ke menu sebelumnya\n");
     printf("\n");
-    printf("Pilih menu (1-3): ");
+    printf("Pilih menu (1-5): ");
     // printf("\033[2J\033[1;1H");
 }
 
@@ -58,8 +60,9 @@ void addData() {
     printf("====================\n");
     printf("1. Tambah Data Kerajinan\n");
     printf("2. Tambah Data Pasar\n");
+    printf("3. Kembali ke menu sebelumnya\n")
     printf("\n");
-    printf("Pilih menu (1-2): ");
+    printf("Pilih menu (1-3): ");
 }
 
 // edit data
@@ -69,8 +72,9 @@ void editData() {
     printf("====================\n");
     printf("1. Edit Data Kerajinan\n");
     printf("2. Edit Data Pasar\n");
+    printf("3. Kembali ke menu sebelumya\n")
     printf("\n");
-    printf("Pilih menu (1-2): ");
+    printf("Pilih menu (1-3): ");
 }
 
 // delete data
@@ -80,6 +84,7 @@ void deleteData() {
     printf("====================\n");
     printf("1. Hapus Data Kerajinan\n");
     printf("2. Hapus Data Pasar\n");
+    printf("3. Kembali ke menu sebelumnya\n")
     printf("\n");
     printf("Pilih menu (1-2): ");
 }
