@@ -9,6 +9,11 @@ int main()
     // welcome
     welcomeBanner();
     
+    // values
+    ListPasar LP;
+    ListKerajinan LK;
+    ListRelasi LR;
+
     // main Menu
     mainMenu();
     int mainMenuOption;
@@ -20,12 +25,14 @@ int main()
         cin >> addDataOption;
         if (addDataOption == 1) {
             // add data kerajinan
+            createListKerajinan(LK);
 
         } else if (addDataOption == 2) {
             // add data pasar
+            createListPasar(LP);
 
         } else if (addDataOption == 3) {
-            // exit to main menu
+            // aku ga tau apa yang harus aku masukin disini
 
         } else if (addDataOption < 1 || addDataOption > 3) {
             // invalid optiions
@@ -62,9 +69,9 @@ int main()
     } else if (mainMenuOption == 3) {
         // primitive, need to be revamped
         printf("Outputting data...");
-        showAllPasar(L);
-        showAllKerajinan(L);
-        printAllRelasi(L, LP);
+        showAllPasar(LP);
+        showAllKerajinan(LK);
+        printAllRelasi(LR, LP);
     } else if (mainMenuOption == 4) {
         printf("Exiting,,,");
         return 0;
