@@ -13,7 +13,7 @@ void createListKerajinan(ListKerajinan &L)
 
 adrPasar createNewElmPasar(pasar x)
 {
-    adrPasar P = new pasar;
+    adrPasar P = new elmPasar;
     infoPasar(P) = x;
     nextPasar(P) = NULL;
     return P;
@@ -21,7 +21,7 @@ adrPasar createNewElmPasar(pasar x)
 
 adrKerajinan createNewElmKerajinan(kerajinan x)
 {
-    adrKerajinan P = new kerajinan;
+    adrKerajinan P = new elmKerajinan;
     infoKerajinan(P) = x;
     nextKerajinan(P) = NULL;
     prevKerajinan(P) = NULL;
@@ -119,46 +119,43 @@ void deleteFoundPasar(ListPasar &L, adrPasar &P, adrPasar del)
 adrPasar findPasarByLokasi(ListPasar L, string lokasi)
 {
     adrPasar Q = firstPasar(L);
-    bool found = false;
-    while (Q != NULL && !found)
+    while (Q != NULL)
     {
         if (infoPasar(Q).lokasi == lokasi)
         {
-            found = true;
+            return Q;
         }
         Q = nextPasar(Q);
     }
-    return Q;
+    return NULL;
 }
 
 adrKerajinan findKerajinanByNamaKerajinan(ListKerajinan L, string namaKerajinan)
 {
     adrKerajinan Q = firstKerajinan(L);
-    bool found = false;
-    while (Q != NULL && !found)
+    while (Q != NULL)
     {
         if (infoKerajinan(Q).namaKerajinan == namaKerajinan)
         {
-            found = true;
+            return Q;
         }
         Q = nextKerajinan(Q);
     }
-    return Q;
+    return NULL;
 }
 
 adrKerajinan findKerajinanByNamaPengrajin(ListKerajinan L, string namaPengrajin)
 {
     adrKerajinan Q = firstKerajinan(L);
-    bool found = false;
-    while (Q != NULL && !found)
+    while (Q != NULL)
     {
         if (infoKerajinan(Q).namaPengrajin == namaPengrajin)
         {
-            found = true;
+            return Q;
         }
         Q = nextKerajinan(Q);
     }
-    return Q;
+    return NULL;
 }
 
 void showAllPasar(ListPasar L)

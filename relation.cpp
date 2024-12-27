@@ -34,12 +34,16 @@ void deleteFoundRelasi(ListRelasi &L, adrRelasi &P, adrRelasi del)
 {
     if (del == firstRelasi(L))
     {
-        firstRelasi(L) = nextRelasi(firstKerajinan(L));
+        firstRelasi(L) = nextRelasi(firstRelasi(L));
+        nextRelasiPasar(del) = NULL;
+        nextRelasiKerajinan(del) = NULL;
         nextRelasi(del) = NULL;
     }
     else if (del == lastRelasi(L))
     {
-        lastKerajinan(L) = prevRelasi(lastRelasi(L));
+        lastRelasi(L) = prevRelasi(lastRelasi(L));
+        nextRelasiPasar(del) = NULL;
+        nextRelasiKerajinan(del) = NULL;
         prevRelasi(del) = NULL;
     }
     else if (del == NULL)
@@ -52,6 +56,8 @@ void deleteFoundRelasi(ListRelasi &L, adrRelasi &P, adrRelasi del)
         nextRelasi(prec) = nextRelasi(del);
         prevRelasi(nextRelasi(del)) = prec;
         prevRelasi(del) = NULL;
+        nextRelasiPasar(del) = NULL;
+        nextRelasiKerajinan(del) = NULL;
         nextRelasi(del) = NULL;
     }
     P = del;
@@ -64,11 +70,11 @@ adrRelasi findRelasi(ListRelasi L, adrKerajinan K, adrPasar P)
     {
         while (R != NULL)
         {
-            if (nextPasar(R) == P && nextKerajinan(R) == K)
+            if (nextRelasiPasar(R) == P && nextRelasiKerajinan(R) == K)
             {
                 return R;
             }
-            R = next(R);
+            R = nextRelasi(R);
         }
     }
     return NULL;
@@ -106,7 +112,7 @@ void printAllRelasi(ListRelasi L, ListPasar LP)
 {
     adrPasar P = firstPasar(LP);
     cout << "LIST OF ALL RELATIONS - ARTISANS" << endl;
-    while (R != NULL)
+    while (P != NULL)
     {
         cout << "# " << infoPasar(P).namaPasar << " - " << infoPasar(P).lokasi << endl;
         adrRelasi R = firstRelasi(L);
@@ -119,7 +125,7 @@ void printAllRelasi(ListRelasi L, ListPasar LP)
                     cout << "|---> " << infoKerajinan(nextRelasiKerajinan(R)).namaKerajinan << " - By: " << infoKerajinan(nextRelasiKerajinan(R)).namaPengrajin << endl;
                 }
                 R = nextRelasi(R);
-            } while (R != firstRelasi(L));
+            } while (R != firstRelasi(L) && R != NULL);
         }
         cout << endl;
         P = nextPasar(P);
