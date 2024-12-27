@@ -39,14 +39,17 @@ int main()
         if (mainMenuOption == 1)
         {
             // add data
+            printf("\033[2J\033[1;1H");
             while (true)
             {
+                
                 addData();
                 int addDataOption;
                 cin >> addDataOption;
                 if (addDataOption == 1)
                 {
                     // add data kerajinan
+                    printf("\033[2J\033[1;1H");
                     int loopKerajinanDataAdd;
                     cout << "Jumlah data kerajinan yang ingin dimasukkan: ";
                     cin >> loopKerajinanDataAdd;
@@ -66,8 +69,9 @@ int main()
                 else if (addDataOption == 2)
                 {
                     // add data pasar
+                    printf("\033[2J\033[1;1H");
                     int loopPasarDataAdd;
-                    cout << "Jumlah data kerajinan yang ingin dimasukkan: ";
+                    cout << "Jumlah data pasar yang ingin dimasukkan: ";
                     cin >> loopPasarDataAdd;
                     for (int i = 0; i < loopPasarDataAdd; i++)
                     {
@@ -83,11 +87,13 @@ int main()
                 else if (addDataOption == 3)
                 {
                     cout << "Kembali ke menu utama...\n";
+                    printf("\033[2J\033[1;1H");
                     break;
                 }
                 else
                 {
                     cout << "Opsi tidak valid, coba lagi...\n";
+                    printf("\033[2J\033[1;1H");
                     addData();
                 }
             }
@@ -95,12 +101,14 @@ int main()
         else if (mainMenuOption == 2)
         {
             // config data
+            printf("\033[2J\033[1;1H");
             configData();
             int configDataOption;
             cin >> configDataOption;
             if (configDataOption == 1)
             {
                 // delete data
+                printf("\033[2J\033[1;1H");
                 while (true)
                 {
                     deleteData();
@@ -109,29 +117,37 @@ int main()
                     if (deleteDataOption == 1)
                     {
                         // delete data kerajinan
+                        printf("\033[2J\033[1;1H");
+                        showAllKerajinan(LK);
                         string namaKerajinan;
                         cout << "Nama Kerajinan yang ingin dihapus: ";
                         cin >> namaKerajinan;
                         adrKerajinan del = findKerajinanByNamaKerajinan(LK, namaKerajinan);
                         deleteFoundKerajinan(LK, del, del);
+                        cout << "Alamat Kerajinan Yang dihapus: " << del << endl;
                     }
                     else if (deleteDataOption == 2)
                     {
                         // delete data pasar
+                        printf("\033[2J\033[1;1H");
+                        showAllPasar(LP);
                         string lokasiPasar;
                         cout << "Lokasi Pasar yang ingin dihapus: ";
                         cin >> lokasiPasar;
                         adrPasar del = findPasarByLokasi(LP, lokasiPasar);
                         deleteFoundPasar(LP, del, del);
+                        cout << "Alamat Pasar Yang dihapus: " << del << endl;
                     }
                     else if (deleteDataOption == 3)
                     {
                         cout << "Kembali ke menu utama...\n";
+                        printf("\033[2J\033[1;1H");
                         break;
                     }
                     else
                     {
                         cout << "Opsi tidak valid, coba lagi...\n";
+                        printf("\033[2J\033[1;1H");
                         deleteData();
                     }
                 }
@@ -139,6 +155,7 @@ int main()
             else if (configDataOption == 2)
             {
                 // find data
+                printf("\033[2J\033[1;1H");
                 while (true)
                 {
                     findData();
@@ -147,6 +164,7 @@ int main()
                     if (findDataOption == 1)
                     {
                         // find data kerajinan
+                        printf("\033[2J\033[1;1H");
                         while (true)
                         {
                             findDataKerajinanOptions();
@@ -155,6 +173,7 @@ int main()
                             if (findDataKerajinanOption == 1)
                             {
                                 // find data kerajinan by nama kerajinan
+                                printf("\033[2J\033[1;1H");
                                 string namaKerajinan;
                                 cout << "Nama Kerajinan yang ingin dicari: ";
                                 cin >> namaKerajinan;
@@ -174,6 +193,7 @@ int main()
                             else if (findDataKerajinanOption == 2)
                             {
                                 // find data kerajinan by nama pengrajin
+                                printf("\033[2J\033[1;1H");
                                 string namaPengrajin;
                                 cout << "Nama Pengrajin yang ingin dicari: ";
                                 cin >> namaPengrajin;
@@ -193,11 +213,13 @@ int main()
                             else if (findDataKerajinanOption == 3)
                             {
                                 cout << "Kembali ke menu utama...\n";
+                                printf("\033[2J\033[1;1H");
                                 break;
                             }
                             else
                             {
                                 cout << "Opsi tidak valid, coba lagi...\n";
+                                printf("\033[2J\033[1;1H");
                                 findDataKerajinanOptions();
                             }
                         }
@@ -205,6 +227,7 @@ int main()
                     else if (findDataOption == 2)
                     {
                         // find data pasar
+                        printf("\033[2J\033[1;1H");
                         string lokasiPasar;
                         cout << "Lokasi Pasar yang ingin dicari: ";
                         cin >> lokasiPasar;
@@ -223,11 +246,13 @@ int main()
                     else if (findDataOption == 3)
                     {
                         cout << "Kembali ke menu utama...\n";
+                        printf("\033[2J\033[1;1H");
                         break;
                     }
                     else
                     {
                         cout << "Opsi tidak valid, coba lagi...\n";
+                        printf("\033[2J\033[1;1H");
                         findData();
                     }
                 }
@@ -235,14 +260,19 @@ int main()
             else if (configDataOption == 3)
             {
                 // data relation
+                printf("\033[2J\033[1;1H");
                 while (true)
                 {
+                    printAllRelasi(LR, LP);
                     configDataRelation();
                     int configDataRelationOption;
                     cin >> configDataRelationOption;
                     if (configDataRelationOption == 1)
                     {
                         // add relation
+                        printf("\033[2J\033[1;1H");
+                        showAllPasar(LP);
+                        showAllKerajinan(LK);
                         string lokasiPasar;
                         string namaKerajinan;
                         cout << "Lokasi Pasar: ";
@@ -254,6 +284,7 @@ int main()
                     else if (configDataRelationOption == 2)
                     {
                         // find relation
+                        printf("\033[2J\033[1;1H");
                         string lokasiPasar;
                         string namaKerajinan;
                         cout << "Lokasi Pasar: ";
@@ -278,6 +309,8 @@ int main()
                     else if (configDataRelationOption == 3)
                     {
                         // delete relation
+                        printf("\033[2J\033[1;1H");
+                        printAllRelasi(LR, LP);
                         string lokasiPasar;
                         string namaKerajinan;
                         cout << "Lokasi Pasar: ";
@@ -292,11 +325,13 @@ int main()
                     else if (configDataRelationOption == 4)
                     {
                         cout << "Kembali ke menu utama...\n";
+                        printf("\033[2J\033[1;1H");
                         break;
                     }
                     else
                     {
                         cout << "Opsi tidak valid, coba lagi...\n";
+                        printf("\033[2J\033[1;1H");
                         configDataRelation();
                     }
                 }
@@ -305,18 +340,21 @@ int main()
             {
                 // exit to main menu
                 cout << "Kembali ke menu utama...\n";
+                printf("\033[2J\033[1;1H");
                 break;
             }
             else
             {
                 // invalid
                 cout << "Opsi tidak valid, coba lagi...\n";
+                printf("\033[2J\033[1;1H");
                 configData();
             }
         }
         else if (mainMenuOption == 3)
         {
             // show all data
+            printf("\033[2J\033[1;1H");
             while (true)
             {
                 showAllDataMenu();
@@ -325,26 +363,31 @@ int main()
                 if (showAllDataOption == 1)
                 {
                     // show all data pasar
+                    printf("\033[2J\033[1;1H");
                     showAllPasar(LP);
                 }
                 else if (showAllDataOption == 2)
                 {
                     // show all data kerajinan
+                    printf("\033[2J\033[1;1H");
                     showAllKerajinan(LK);
                 }
                 else if (showAllDataOption == 3)
                 {
                     // show all data relation
+                    printf("\033[2J\033[1;1H");
                     printAllRelasi(LR, LP);
                 }
                 else if (showAllDataOption == 4)
                 {
                     cout << "Kembali ke menu utama...\n";
+                    printf("\033[2J\033[1;1H");
                     break;
                 }
                 else
                 {
                     cout << "Opsi tidak valid, coba lagi...\n";
+                    printf("\033[2J\033[1;1H");
                     showAllDataMenu();
                 }
             }
@@ -352,11 +395,13 @@ int main()
         else if (mainMenuOption == 4)
         {
             printf("Exiting,,,");
+            printf("\033[2J\033[1;1H");
             break;
         }
         else
         {
             cout << "Opsi tidak valid, coba lagi...\n";
+            printf("\033[2J\033[1;1H");
             mainMenu();
         }
     }

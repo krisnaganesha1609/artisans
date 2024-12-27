@@ -167,6 +167,7 @@ void showAllPasar(ListPasar L)
     {
         cout << i << ". " << infoPasar(pas).namaPasar << " - " << infoPasar(pas).lokasi << endl;
         pas = nextPasar(pas);
+        i++;
     }
     cout << endl;
 }
@@ -180,6 +181,7 @@ void showAllKerajinan(ListKerajinan L)
     {
         cout << i << ". " << infoKerajinan(ker).namaPengrajin << " - " << infoKerajinan(ker).namaKerajinan << " - Stok: " << infoKerajinan(ker).stok << endl;
         ker = nextKerajinan(ker);
+        i++;
     }
     cout << endl;
 }

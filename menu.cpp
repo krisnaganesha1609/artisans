@@ -35,7 +35,7 @@ void mainMenu() {
     printf("3. Tampilkan Data\n");
     printf("4. Keluar dari program\n");
     printf("\n");
-    printf("Pilih menu (1-3): ");
+    printf("Pilih menu (1-4): ");
     // printf("\033[2J\033[1;1H");
 }
 
@@ -44,7 +44,7 @@ void configData() {
     printf("====================\n");
     printf("  Konfigurasi Data  \n");
     printf("====================\n");
-    printf("1. delete Data\n");
+    printf("1. Hapus Data\n");
     printf("2. Cari Data\n");
     printf("3. Relasi Data\n");
     printf("4. Kembali ke menu sebelumnya\n");
@@ -74,7 +74,7 @@ void deleteData() {
     printf("2. Hapus Data Pasar\n");
     printf("3. Kembali ke menu sebelumnya\n");
     printf("\n");
-    printf("Pilih menu (1-2): ");
+    printf("Pilih menu (1-3): ");
 }
 
 // find data

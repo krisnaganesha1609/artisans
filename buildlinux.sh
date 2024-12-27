@@ -28,4 +28,4 @@ fi
 
 # build the main program
 echo "Building..."
-g++ main.cpp -static -o $PWDDIR/build/main 2>&1 | tee $PWDDIR/build/build.log
+g++ main.cpp -o $PWDDIR/build/main 2>&1 | tee $PWDDIR/build/build.log
