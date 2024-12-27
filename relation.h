@@ -8,6 +8,8 @@ using namespace std;
 #define lastRelasi(L) L.LastRelasi
 #define nextRelasi(Q) Q->nextRelasi
 #define prevRelasi(Q) Q->prevRelasi
+#define nextRelasiPasar(Q) Q->nextRelasiPasar
+#define nextRelasiKerajinan(Q) Q->nextRelasiKerajinan
 
 typedef struct elmRelasi *adrRelasi;
 

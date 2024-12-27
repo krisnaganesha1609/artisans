@@ -1,8 +1,11 @@
 #include "artisans.h"
+#include "artisans.cpp"
 #include "menu.h"
 #include "menu.cpp"
 #include "relation.h"
 #include "relation.cpp"
+
+using namespace std;
 
 int main()
 {
@@ -281,8 +284,10 @@ int main()
                         cin >> lokasiPasar;
                         cout << "Nama Kerajinan: ";
                         cin >> namaKerajinan;
+                        adrRelasi theDeletedOne;
                         adrRelasi del = findRelasiByInfo(LR, lokasiPasar, namaKerajinan);
-                        deleteFoundRelasi(LR, del, del);
+                        deleteFoundRelasi(LR, theDeletedOne, del);
+                        cout << "Alamat Relasi Yang dihapus: " << theDeletedOne << endl;
                     }
                     else if (configDataRelationOption == 4)
                     {

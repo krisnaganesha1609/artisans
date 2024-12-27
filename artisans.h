@@ -1,7 +1,7 @@
 #ifndef ARTISANS_H_INCLUDED
 #define ARTISANS_H_INCLUDED
 #include <iostream>
-#define firstKerajinan(L) L.FirstKerajinan
+#define firstKerajinan(L) L.Firstkerajinan
 #define lastKerajinan(L) L.Lastkerajinan
 #define firstPasar(G) G.FirstPasar
 #define infoKerajinan(P) P->infoKerajinan
@@ -41,14 +41,14 @@ struct pasar
 
 struct elmKerajinan
 {
-    kerajinan info;
-    adrKerajinan prevkerajinan;
-    adrKerajinan nextkerajinan;
+    kerajinan infoKerajinan;
+    adrKerajinan prevKerajinan;
+    adrKerajinan nextKerajinan;
 };
 
 struct elmPasar
 {
-    pasar info;
+    pasar infoPasar;
     adrPasar nextPasar;
 };
 
