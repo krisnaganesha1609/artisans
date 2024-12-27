@@ -39,17 +39,17 @@ void mainMenu() {
     // printf("\033[2J\033[1;1H");
 }
 
+// config data
 void configData() {
     printf("====================\n");
     printf("  Konfigurasi Data  \n");
     printf("====================\n");
-    printf("1. Edit Data\n");
-    printf("2. delete Data\n");
-    printf("3. Cari Data\n");
-    printf("4. Relasi Data\n");
-    printf("5. Kembali ke menu sebelumnya\n");
+    printf("1. delete Data\n");
+    printf("2. Cari Data\n");
+    printf("3. Relasi Data\n");
+    printf("4. Kembali ke menu sebelumnya\n");
     printf("\n");
-    printf("Pilih menu (1-5): ");
+    printf("Pilih menu (1-4): ");
     // printf("\033[2J\033[1;1H");
 }
 
@@ -60,19 +60,7 @@ void addData() {
     printf("====================\n");
     printf("1. Tambah Data Kerajinan\n");
     printf("2. Tambah Data Pasar\n");
-    printf("3. Kembali ke menu sebelumnya\n")
-    printf("\n");
-    printf("Pilih menu (1-3): ");
-}
-
-// edit data
-void editData() {
-    printf("====================\n");
-    printf("     Edit  Data     \n");
-    printf("====================\n");
-    printf("1. Edit Data Kerajinan\n");
-    printf("2. Edit Data Pasar\n");
-    printf("3. Kembali ke menu sebelumya\n")
+    printf("3. Kembali ke menu sebelumnya\n");
     printf("\n");
     printf("Pilih menu (1-3): ");
 }
@@ -84,7 +72,59 @@ void deleteData() {
     printf("====================\n");
     printf("1. Hapus Data Kerajinan\n");
     printf("2. Hapus Data Pasar\n");
-    printf("3. Kembali ke menu sebelumnya\n")
+    printf("3. Kembali ke menu sebelumnya\n");
     printf("\n");
     printf("Pilih menu (1-2): ");
+}
+
+// find data
+void findData() {
+    printf("====================\n");
+    printf("     Cari  Data     \n");
+    printf("====================\n");
+    printf("1. Cari Data Kerajinan\n");
+    printf("2. Cari Data Pasar\n");
+    printf("3. Kembali ke menu sebelumnya\n");
+    printf("\n");
+    printf("Pilih menu (1-3): ");
+}
+
+// config data relation
+void configDataRelation() {
+    printf("======================\n");
+    printf("  Konfigurasi Relasi  \n");
+    printf("======================\n");
+    printf("1. Tambah Relasi\n");
+    printf("2. Cari Relasi\n");
+    printf("3. Hapus Relasi\n");
+    printf("4. Kembali ke menu sebelumnya\n");
+    printf("\n");
+    printf("Pilih menu (1-4): ");
+    // printf("\033[2J\033[1;1H");
+}
+
+// config data relation
+void showAllDataMenu() {
+    printf("==================\n");
+    printf("  Tampilkan Data  \n");
+    printf("==================\n");
+    printf("1. Tampilkan Data Pasar\n");
+    printf("2. Tampilkan Data Kerajinan\n");
+    printf("3. Tampilkan Data Relasi\n");
+    printf("4. Kembali ke menu sebelumnya\n");
+    printf("\n");
+    printf("Pilih menu (1-4): ");
+    // printf("\033[2J\033[1;1H");
+}
+
+// find data kerajinan options
+void findDataKerajinanOptions() {
+    printf("====================\n");
+    printf("     Cari  Data     \n");
+    printf("====================\n");
+    printf("1. Cari Data Kerajinan\n");
+    printf("2. Cari Data Pengrajin\n");
+    printf("3. Kembali ke menu sebelumnya\n");
+    printf("\n");
+    printf("Pilih menu (1-3): ");
 }
