@@ -13,3 +13,17 @@ A little program to count your own crafts and save lists of the markets that you
 - Find Relation (by name of the goodies and name of the goodies)
 - Delete Relation (by name of the goodies and name of the goodies)
 - Show all Data (3 opstions, the goodies, market, and relation)
+
+# How To Compile & Run
+- Simply go to project directory and then enter:
+
+  ON WINDOWS:
+
+  - `./buildwin.bat`
+  - `cd build && ./main.exe`
+
+  ON LINUX:
+  
+  - `chmod +x buildlinux.sh`
+  - `./buildlinux.sh`
+  - `cd build && ./main.exe`
