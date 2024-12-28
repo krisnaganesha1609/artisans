@@ -26,4 +26,4 @@ A little program to count your own crafts and save lists of the markets that you
   
   - `chmod +x buildlinux.sh`
   - `./buildlinux.sh`
-  - `cd build && ./main.exe`
+  - `cd build && ./main`
