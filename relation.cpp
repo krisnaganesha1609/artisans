@@ -122,7 +122,7 @@ void printAllRelasi(ListRelasi L, ListPasar LP)
             {
                 if (nextRelasiPasar(R) == P)
                 {
-                    cout << "|---> " << infoKerajinan(nextRelasiKerajinan(R)).namaKerajinan << " - By: " << infoKerajinan(nextRelasiKerajinan(R)).namaPengrajin << endl;
+                    cout << "|---> " << infoKerajinan(nextRelasiKerajinan(R)).namaKerajinan << " - By: " << infoKerajinan(nextRelasiKerajinan(R)).namaPengrajin << " - Stok: " << infoKerajinan(nextRelasiKerajinan(R)).stok << endl;
                 }
                 R = nextRelasi(R);
             } while (R != firstRelasi(L) && R != NULL);
@@ -138,7 +138,27 @@ void transaction(ListRelasi &L, string lokasiPasar, string namaKerajinan, int qt
     adrRelasi R = findRelasiByInfo(L, lokasiPasar, namaKerajinan);
     if (R != NULL && infoKerajinan(nextRelasiKerajinan(R)).stok > 0)
     {
-        infoKerajinan(nextRelasiKerajinan(R)).stok = infoKerajinan(nextRelasiKerajinan(R)).stok - qty;
+        if (qty > infoKerajinan(nextRelasiKerajinan(R)).stok)
+        {
+            char y;
+            cout << "Mohon maaf stok hanya tersisa: " << infoKerajinan(nextRelasiKerajinan(R)).stok << " . Apakah anda jadi membeli semuanya? (Y/n) ";
+            cin >> y;
+            if (y == 'Y' || y == 'y')
+            {
+                infoKerajinan(nextRelasiKerajinan(R)).stok = 0;
+            }
+            else
+            {
+                cout << "Membatalkan transaksi..." << endl;
+                sleep_for(3s);
+            }
+        }
+        else
+        {
+            infoKerajinan(nextRelasiKerajinan(R)).stok = infoKerajinan(nextRelasiKerajinan(R)).stok - qty;
+            cout << "Melakukan transaksi..." << endl;
+            sleep_for(3s);
+        }
     }
     else if (R != NULL && infoKerajinan(nextRelasiKerajinan(R)).stok <= 0)
     {

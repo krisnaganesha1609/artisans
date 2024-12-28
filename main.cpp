@@ -264,15 +264,21 @@ int main()
                         cin >> configDataRelationOption;
                         if (configDataRelationOption == 1)
                         {
-                            // add relation
+                            int countRelasi = 0;
+                            cout << "Banyaknya relasi yang mau diinputkan: ";
+                            cin >> countRelasi;
                             printf("\033[2J\033[1;1H");
                             showAllPasar(LP);
                             showAllKerajinan(LK);
-                            string lokasiPasar;
-                            string namaKerajinan;
-                            cout << "Masukkan relasi tanpa koma (lokasiPasar, namaKerajinan): ";
-                            cin >> lokasiPasar >> namaKerajinan;
-                            connectRelasi(LR, LP, LK, lokasiPasar, namaKerajinan);
+                            for (int c = 1; c <= countRelasi; c++)
+                            {
+                                // add relation
+                                string lokasiPasar;
+                                string namaKerajinan;
+                                cout << "Masukkan relasi tanpa koma (lokasiPasar, namaKerajinan): ";
+                                cin >> lokasiPasar >> namaKerajinan;
+                                connectRelasi(LR, LP, LK, lokasiPasar, namaKerajinan);
+                            }
                         }
                         else if (configDataRelationOption == 2)
                         {
@@ -389,19 +395,18 @@ int main()
         else if (mainMenuOption == 4)
         {
             // transaction
-            showAllPasar(LP);
-            showAllKerajinan(LK);
+            printAllRelasi(LR, LP);
             string namePasarTransaction;
             string nameKerajinanTransaction;
             int qtyTransaction;
-            cout << "Masukkan nama Pasar: ";
+            cout << "Masukkan lokasi Pasar: ";
             cin >> namePasarTransaction;
             cout << "Masukkan nama Kerajinan: ";
             cin >> nameKerajinanTransaction;
             cout << "Masukkan jumlah transaksi: ";
             cin >> qtyTransaction;
             transaction(LR, namePasarTransaction, nameKerajinanTransaction, qtyTransaction);
-            cout << "Transaksi berhasil! (" << namePasarTransaction << ", " << nameKerajinanTransaction << ", " << qtyTransaction << ")\n";
+            cout << "Transaksi selesai! (" << namePasarTransaction << ", " << nameKerajinanTransaction << ", " << qtyTransaction << ")\n";
             sleep_for(3s);
         }
         else if (mainMenuOption == 5)
