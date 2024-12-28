@@ -14,7 +14,7 @@ if not exist "%PWDDIR%\build" (
 REM Check if previous version of main.exe exists
 if exist "%PWDDIR%\build\main.exe" (
     echo Cleaning up...
-    rmdir /s /q "%PWDDIR%\build"
+    del "%PWDDIR%\build\*.exe"
 )
 
 REM Check if g++ exists
