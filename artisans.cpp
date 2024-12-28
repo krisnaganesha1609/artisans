@@ -179,7 +179,12 @@ void showAllKerajinan(ListKerajinan L)
     cout << "LIST OF REGISTERED CRAFTS - ARTISANS" << endl;
     while (ker != NULL)
     {
-        cout << i << ". " << infoKerajinan(ker).namaPengrajin << " - " << infoKerajinan(ker).namaKerajinan << " - Stok: " << infoKerajinan(ker).stok << endl;
+        int stk = infoKerajinan(ker).stok;
+        if (stk <= 0)
+        {
+            stk = 0;
+        }
+        cout << i << ". " << infoKerajinan(ker).namaPengrajin << " - " << infoKerajinan(ker).namaKerajinan << " - Stok: " << stk << endl;
         ker = nextKerajinan(ker);
         i++;
     }

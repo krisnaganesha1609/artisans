@@ -132,3 +132,20 @@ void printAllRelasi(ListRelasi L, ListPasar LP)
     }
     cout << endl;
 }
+
+void transaction(ListRelasi &L, string lokasiPasar, string namaKerajinan, int qty)
+{
+    adrRelasi R = findRelasiByInfo(L, lokasiPasar, namaKerajinan);
+    if (R != NULL && infoKerajinan(nextRelasiKerajinan(R)).stok > 0)
+    {
+        infoKerajinan(nextRelasiKerajinan(R)).stok = infoKerajinan(nextRelasiKerajinan(R)).stok - qty;
+    }
+    else if (R != NULL && infoKerajinan(nextRelasiKerajinan(R)).stok <= 0)
+    {
+        cout << "Mohon maaf stok sudah habis!" << endl;
+    }
+    else
+    {
+        cout << "Ada kesalahan!" << endl;
+    }
+}

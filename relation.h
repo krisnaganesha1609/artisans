@@ -38,4 +38,6 @@ void connectRelasi(ListRelasi &L, ListPasar LP, ListKerajinan LK, string lokasiP
 
 void printAllRelasi(ListRelasi L, ListPasar LP);
 
+void transaction(ListRelasi &L, string lokasiPasar, string namaKerajinan, int qty);
+
 #endif // RELATION_H_INCLUDED
