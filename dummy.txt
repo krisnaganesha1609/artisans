@@ -1,0 +1,102 @@
+Data Dummy Kerajinan (10 Data)
+
+|  nama Kerajinan     |   namaPengrajin    |  stok   |
+    TasAnyaman,              IbuSiti,          25
+    PatungKayu,              PakWayan,         15
+    BatikTulis,              IbuDewi,          40
+    KeramikHias,             PakJoko,          30
+    KalungManikManik,        MbakLina,         50
+    LampuHias,               PakAndi,          20
+    LukisanTradisional,      IbuRini,          10
+    GantunganKunci,          MbakMaya,         60
+    TopengTradisional,       PakRahmat,        18
+    KainTenun,               IbuRatna,         35
+
+Data Dummy Pasar (10 Data)
+
+|     nama Pasar            |        lokasiPasar       |
+  PasarTradisionalUbud,                 Bali
+  PasarSeniSukawati,                  Lombok
+  PasarBeringharjo,                 Yogyakarta
+  PasarKlewer,                         Solo
+  PasarSeniAncol,                    Jakarta
+  PasarBringharjo,                  Surabaya
+  PasarNgasem,                       Malang
+  PasarBadung,                       Denpasar
+  PasarAtasBukittinggi,            Bukittinggi
+  PasarTerapungLokBaintan,        Banjarmasin
+
+Data Dummy Relasi (20 Data)
+
+|      lokasiPasar          |         namaKerajinan      |
+     Bali,                           TasAnyaman
+     Lombok,                         PatungKayu
+     Yogyakarta,                     BatikTulis
+     Solo,                           KeramikHias
+     Jakarta,                        KalungManikManik
+     Surabaya,                       LampuHias
+     Malang,                         LukisanTradisional
+     Denpasar,                       GantunganKunci
+     Bukittinggi,                    TopengTradisional
+     Banjarmasin,                    KainTenun
+     Bali,                           LukisanTradisional
+     Lombok,                         LampuHias
+     Yogyakarta,                     GantunganKunci
+     Solo,                           TopengTradisional
+     Jakarta,                        TasAnyaman
+     Surabaya,                       KalungManikManik
+     Malang,                         PatungKayu
+     Denpasar,                       BatikTulis
+     Bukittinggi,                    KeramikHias
+     Banjarmasin,                    KainTenun
+
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVv
+
+UNTUK COPAS:
+
+
+Kerajinan:
+TasAnyaman IbuSiti 25 
+PatungKayu PakWayan 15
+BatikTulis IbuDewi 40
+KeramikHias PakJoko 30
+KalungManikManik MbakLina 50
+LampuHias PakAndi 20
+LukisanTradisional IbuRini 10
+GantunganKunci MbakMaya 60
+TopengTradisional PakRahmat 18
+KainTenun IbuRatna 35
+
+Pasar:
+PasarTradisionalUbud Bali
+PasarSeniSukawati Lombok
+PasarBeringharjo Yogyakarta
+PasarKlewer Solo
+PasarSeniAncol Jakarta
+PasarBringharjo Surabaya
+PasarNgasem Malang
+PasarBadung Denpasar
+PasarAtasBukittinggi Bukittinggi
+PasarTerapungLokBaintan Banjarmasin
+
+Relasi:
+Bali TasAnyaman
+Lombok PatungKayu
+Yogyakarta BatikTulis
+Solo KeramikHias
+Jakarta KalungManikManik
+Surabaya LampuHias
+Malang LukisanTradisional
+Denpasar GantunganKunci
+Bukittinggi TopengTradisional
+Banjarmasin KainTenun
+Bali LukisanTradisional
+Lombok LampuHias
+Yogyakarta GantunganKunci
+Solo TopengTradisional
+Jakarta TasAnyaman
+Surabaya KalungManikManik
+Malang PatungKayu
+Denpasar BatikTulis
+Bukittinggi KeramikHias
+Banjarmasin KainTenun
