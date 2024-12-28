@@ -33,9 +33,10 @@ void mainMenu() {
     printf("1. Tambah Data\n");
     printf("2. Konfigurasi Data\n");
     printf("3. Tampilkan Data\n");
-    printf("4. Keluar dari program\n");
+    printf("4. Transaksi\n");
+    printf("5. Keluar dari program\n");
     printf("\n");
-    printf("Pilih menu (1-4): ");
+    printf("Pilih menu (1-5): ");
     // printf("\033[2J\033[1;1H");
 }
 

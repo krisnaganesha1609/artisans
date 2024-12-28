@@ -55,8 +55,8 @@ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVv
 UNTUK COPAS:
 
 
-Kerajinan:
-TasAnyaman IbuSiti 25 
+Kerajinan (10pcs):
+TasAnyaman IbuSiti 25
 PatungKayu PakWayan 15
 BatikTulis IbuDewi 40
 KeramikHias PakJoko 30
@@ -67,7 +67,7 @@ GantunganKunci MbakMaya 60
 TopengTradisional PakRahmat 18
 KainTenun IbuRatna 35
 
-Pasar:
+Pasar (10pcs):
 PasarTradisionalUbud Bali
 PasarSeniSukawati Lombok
 PasarBeringharjo Yogyakarta
@@ -79,7 +79,7 @@ PasarBadung Denpasar
 PasarAtasBukittinggi Bukittinggi
 PasarTerapungLokBaintan Banjarmasin
 
-Relasi:
+Relasi (20pcs):
 Bali TasAnyaman
 Lombok PatungKayu
 Yogyakarta BatikTulis
