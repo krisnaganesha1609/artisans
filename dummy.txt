@@ -90,6 +90,7 @@ Malang LukisanTradisional
 Denpasar GantunganKunci
 Bukittinggi TopengTradisional
 Banjarmasin KainTenun
+
 Bali LukisanTradisional
 Lombok LampuHias
 Yogyakarta GantunganKunci
@@ -99,4 +100,4 @@ Surabaya KalungManikManik
 Malang PatungKayu
 Denpasar BatikTulis
 Bukittinggi KeramikHias
-Banjarmasin KainTenun
+Banjarmasin GantunganKunci
