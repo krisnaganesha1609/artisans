@@ -270,14 +270,9 @@ int main()
                             showAllKerajinan(LK);
                             string lokasiPasar;
                             string namaKerajinan;
-                            int loopRelasiDataAdd;
-                            cout << "Masukkan jumlah data relasi yang ingin ditambahkan: ";
-                            cin >> loopRelasiDataAdd;
-                            for (int i = 0; i < loopRelasiDataAdd; i++) {
-                                cout << "Masukkan relasi tanpa koma (lokasiPasar, namaKerajinan): ";
-                                cin >> lokasiPasar >> namaKerajinan;
-                                connectRelasi(LR, LP, LK, lokasiPasar, namaKerajinan);
-                            }
+                            cout << "Masukkan relasi tanpa koma (lokasiPasar, namaKerajinan): ";
+                            cin >> lokasiPasar >> namaKerajinan;
+                            connectRelasi(LR, LP, LK, lokasiPasar, namaKerajinan);
                         }
                         else if (configDataRelationOption == 2)
                         {
