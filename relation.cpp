@@ -169,3 +169,18 @@ void transaction(ListRelasi &L, string lokasiPasar, string namaKerajinan, int qt
         cout << "Ada kesalahan!" << endl;
     }
 }
+
+int countChildRelasi(ListRelasi L, adrPasar P)
+{
+    adrRelasi R = firstRelasi(L);
+    int count = 0;
+    while (R != NULL)
+    {
+        if (nextRelasiPasar(R) == P)
+        {
+            count++;
+        }
+        R = nextRelasi(R);
+    }
+    return count;
+}

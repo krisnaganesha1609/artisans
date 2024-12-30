@@ -40,4 +40,6 @@ void printAllRelasi(ListRelasi L, ListPasar LP);
 
 void transaction(ListRelasi &L, string lokasiPasar, string namaKerajinan, int qty);
 
+int countChildRelasi(ListRelasi L, adrPasar P);
+
 #endif // RELATION_H_INCLUDED

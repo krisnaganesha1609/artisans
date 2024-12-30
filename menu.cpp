@@ -98,9 +98,10 @@ void configDataRelation() {
     printf("1. Tambah Relasi\n");
     printf("2. Cari Relasi\n");
     printf("3. Hapus Relasi\n");
-    printf("4. Kembali ke menu sebelumnya\n");
+    printf("4. Count child\n");
+    printf("5. Kembali ke menu sebelumnya\n");
     printf("\n");
-    printf("Pilih menu (1-4): ");
+    printf("Pilih menu (1-5): ");
     // printf("\033[2J\033[1;1H");
 }
 

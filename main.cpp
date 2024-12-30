@@ -323,6 +323,15 @@ int main()
                         }
                         else if (configDataRelationOption == 4)
                         {
+                            // count child
+                            printf("\033[2J\033[1;1H");
+                            cout << "Menghitung jumlah..." << endl;
+                            sleep_for(3s);
+                            int countChildAmount = countChildRelasi(LR, AP);
+                            cout << "Jumlah anak: " << countChildAmount << endl;
+                        }
+                        else if (configDataRelationOption == 5)
+                        {
                             cout << "Kembali ke menu utama...\n";
                             printf("\033[2J\033[1;1H");
                             break;
